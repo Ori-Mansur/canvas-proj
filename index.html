@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mister Canvas</title>
+</head>
+<body onload="init()">
+    <header>
+        <h1>Mister Canvas</h1>
+        <nav>
+            <label for="color">Color</label>
+            <input type="color" name="color" id="color" onchange="onSetColor(this.value)">
+            <label for="bgc-color">Background</label>
+            <input type="color" name="bgc-color" id="bgc-color" onchange="onSetBgc(this.value)">
+            <label for="img-canvas">Image</label>
+            <input type="link" name="img-canvas" id="img-canvas" placeholder="IMG URL">
+            <button onclick="onSetImg()">Add Image</button>
+            <label for="shape">Shape</label>
+            <select name="shape" id="shape" onchange="onSetShape(this.value)">
+                <option value="square">Square</option>
+                <option value="triangle">Triangle</option>
+                <option value="circle">Circle</option>
+                <option value="line">Line</option>
+                <option value="text">Text</option>
+            </select>
+            <button>
+                <a href="#" onclick="downloadImg(this)" download="a.jpg">Save</a>
+            </button>
+            <button onclick="clearCanvas()">Clear</button>
+            <button>About</button>
+            <div class="modal-txt">
+            <input type="text" class="user-txt" required placeholder="Enter text">
+        </div>
+        </nav>
+    </header>
+    <main>
+    <canvas id="my-canvas" class="my-canvas" width="900" height="500";
+   onmousedown=" startDraw(event)"
+   onmousemove="draw(event)"
+   onmouseup="endDraw()"
+    ></canvas>
+    <img src="" alt="" class="add-img">
+</main>
+<!-- onmousedown="mouseMoveWhilstDown(this,function (event) { draw(event) });" -->
+    <script src="js/srvice.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
